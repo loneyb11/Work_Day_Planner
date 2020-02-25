@@ -26,115 +26,21 @@
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
-    <header class="jumbotron">
+<body>
+<header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <button class="btn btn-dark" id="clear">Clear Local Storage</button>
     </header>
 
     <div id="calendarArea" class="container-fluid">
       <!-- Timeblocks go here -->
-      <div class="Timeblocks">
-      <!-- Hour 1 -->
-    <form>
-      <div class="form-group row m-3">01:00
-      <div class="col-lg-10 col-md-10 col-sm-8">
-       <textarea class="form-control" id="hourOne" data-hour="1" rows="3" placeholder="Enter hourly events here..."></textarea>
-       </div>
-        <div class="col-lg-1 col-md-1 col-sm-2">
-        <button id="oneButton" type="button" class="saveBtn p-3">save</button>
-        </div>
-      </div>
-      </div>
-    </form>
-        <!-- Hour 2 -->
+      <div class="Time-block">
     
-    <form>
-      <div class="form-group row m-3">02:00
-       <div class="col-lg-10 col-md-10 col-sm-8">
-        <textarea class="form-control" id="hourTwo" data-hour="2" rows="3" placeholder="Enter hourly events here..."></textarea>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-2">
-        <button id="twoButton" type="button" class="saveBtn p-3">save</button>
-        </div>
-       </div>
-      </div>
-    </form>
-      <!-- Hour 3 -->
-      <form>
-        <div class="form-group row m-3">03:00
-         <div class="col-lg-10 col-md-10 col-sm-8">
-          <textarea class="form-control" id="hourThree" data-hour="3" rows="3" placeholder="Enter hourly events here..."></textarea>
-          </div>
-          <div class="col-lg-1 col-md-1 col-sm-2">
-          <button id="theeeButton" type="button" class="saveBtn p-3">save</button>
-          </div>
-         </div>
-        </div>
-      </form>
-    <!-- Hour 4 -->
-    <form>
-      <div class="form-group row m-3">04:00
-       <div class="col-lg-10 col-md-10 col-sm-8">
-        <textarea class="form-control" id="hourFour" data-hour="4" rows="3" placeholder="Enter hourly events here..."></textarea>
-        </div>
-        <div class="col-lg-1 col-md-1 col-sm-2">
-        <button id="fourButton" type="button" class="saveBtn p-3">save</button>
-        </div>
-       </div>
-      </div>
-    </form>
-  <!-- Hour 5 -->
-  <form>
-    <div class="form-group row m-3">05:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourFive" data-hour="5" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="fiveButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-<!-- Hour 6 -->
 <form>
-  <div class="form-group row m-3">06:00
-   <div class="col-lg-10 col-md-10 col-sm-8">
-    <textarea class="form-control" id="hourSix" data-hour="6" rows="3" placeholder="Enter hourly events here..."></textarea>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-2">
-    <button id="sixButton" type="button" class="saveBtn p-3">save</button>
-    </div>
-   </div>
-  </div>
-</form>
-<!-- Hour 7  -->
-<form>
-  <div class="form-group row m-3">07:00
-   <div class="col-lg-10 col-md-10 col-sm-8">
-    <textarea class="form-control" id="hourSeven" data-hour="7" rows="3" placeholder="Enter hourly events here..."></textarea>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-2">
-    <button id="sevenButton" type="button" class="saveBtn p-3">save</button>
-    </div>
-   </div>
-  </div>
-</form>
-<!-- Hour 8 -->
-<form>
-  <div class="form-group row m-3">08:00
-   <div class="col-lg-10 col-md-10 col-sm-8">
-    <textarea class="form-control" id="hourEight" data-hour="8" rows="3" placeholder="Enter hourly events here..."></textarea>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-2">
-    <button id="eightButton" type="button" class="saveBtn p-3">save</button>
-    </div>
-   </div>
-  </div>
-</form>
+  
 <!-- Hour 9 -->
-<form>
   <div class="form-group row m-3">09:00
    <div class="col-lg-10 col-md-10 col-sm-8">
     <textarea class="form-control" id="hourNine" data-hour="9" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -142,11 +48,9 @@
     <div class="col-lg-1 col-md-1 col-sm-2">
     <button id="nineButton" type="button" class="saveBtn p-3">save</button>
     </div>
-   </div>
   </div>
-</form>
+  
   <!-- Hour 10 -->
-  <form>
     <div class="form-group row m-3">10:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourTen" data-hour="10" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -154,11 +58,9 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="tenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
   <!-- Hour 11 -->
-  <form>
     <div class="form-group row m-3">11:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourEleven" data-hour="11" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -166,11 +68,9 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="elevenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
   <!-- Hour 12 -->
-  <form>
     <div class="form-group row m-3">12:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourTwelve" data-hour="12" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -178,11 +78,9 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="twelveButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
   <!-- Hour 13 -->
-  <form>
     <div class="form-group row m-3">13:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourThirteen" data-hour="13" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -190,11 +88,10 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="thirteenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
+  
   <!-- Hour 14 -->
-  <form>
     <div class="form-group row m-3">14:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourFourteen" data-hour="14" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -202,11 +99,10 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="fourteenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
+  
   <!-- Hour 15 -->
-  <form>
     <div class="form-group row m-3">15:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourFithteen" data-hour="15" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -214,11 +110,10 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="fithteenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
+  
   <!-- Hour 16 -->
-  <form>
     <div class="form-group row m-3">16:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourSixteen" data-hour="16" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -226,11 +121,10 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="sixteenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
+    
+  
   <!-- Hour 17 -->
-  <form>
     <div class="form-group row m-3">17:00
      <div class="col-lg-10 col-md-10 col-sm-8">
       <textarea class="form-control" id="hourSeventeen" data-hour="17" rows="3" placeholder="Enter hourly events here..."></textarea>
@@ -238,98 +132,15 @@
       <div class="col-lg-1 col-md-1 col-sm-2">
       <button id="seventeenButton" type="button" class="saveBtn p-3">save</button>
       </div>
-     </div>
     </div>
-  </form>
-  <!-- Hour 18 -->
-  <form>
-    <div class="form-group row m-3">18:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourEigtheen" data-hour="18" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="eighteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 19 -->
-  <form>
-    <div class="form-group row m-3">19:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourNineteen" data-hour="19" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="nineteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 20 -->
-  <form>
-    <div class="form-group row m-3">20:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourTwenty" data-hour="20" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twentyButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 21 -->
-  <form>
-    <div class="form-group row m-3">21:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourTwentyOne" data-hour="21" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twentyOneButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 22 -->
-  <form>
-    <div class="form-group row m-3">22:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourTwentyTwo" data-hour="22" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twentyTwoButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 23 -->
-  <form>
-    <div class="form-group row m-3">23:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourTwentyThree" data-hour="23" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twentyThreeButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
-  </form>
-  <!-- Hour 24 -->
-  <form>
-    <div class="form-group row m-3">00:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="hourTwentyFour" data-hour="24" rows="3" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twentyFourButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-     </div>
-    </div>
+    
   </form>
 </div>
 </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
 </html>
