@@ -5,8 +5,13 @@ setInterval(() => {
     let now =moment();
     let date = now.format("dddd, MMMM, hh:mm a");
     currently.text(date);
-}, 100);
+}, 1000);
 
+$("#clear").on("click", function () {
+    console.log("clicked");
+    localStorage.clear();
+    window.location.reload();
+});
 
 
 $(".saveBtn").click(function () { 
