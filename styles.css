@@ -23,7 +23,6 @@ textarea{
   position: absolute;
 }
 
-
 .jumbotron {
   text-align: center;
   justify-content: center;
@@ -34,7 +33,6 @@ textarea{
   border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
 }
 
-
 .row {
   white-space: pre-wrap;
   height: 100px;
@@ -42,8 +40,12 @@ textarea{
   border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
   border-left: 0.1rem solid rgb(86, 165, 235, 0.25);
   border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
-  
 }
+
+.description{
+white-space: pre-wrap;
+}
+
 .past {
   background-color: #e6e4e4aa;
   color: white;
