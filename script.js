@@ -23,17 +23,17 @@ $('input[type="text"]').each(function () {
     document.getElementById(getting).value = letsGrab; 
 });
 
-colorChecks(9, "#workHour9"); 
-colorChecks(10, "#workHour10"); 
-colorChecks(11, "#workHour11"); 
-colorChecks(12, "#workHour12"); 
-colorChecks(13, "#workHour13");
-colorChecks(14, "#workHour14"); 
-colorChecks(15, "#workHour15"); 
-colorChecks(16, "#workHour16"); 
-colorChecks(17, "#workHour17"); 
+colorChange(9, "#workHour9"); 
+colorChange(10, "#workHour10"); 
+colorChange(11, "#workHour11"); 
+colorChange(12, "#workHour12"); 
+colorChange(13, "#workHour13");
+colorChange(14, "#workHour14"); 
+colorChange(15, "#workHour15"); 
+colorChange(16, "#workHour16"); 
+colorChange(17, "#workHour17"); 
 
-function colorChecks(time, theId) { 
+function colorChange(time, theId) { 
     if (nowHour > time) { 
         $(theId).addClass("past"); 
     }
