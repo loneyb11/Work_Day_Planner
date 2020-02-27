@@ -1,67 +1,46 @@
-$(document).ready(function () {
+let currently = $("#currentDay");
+let nowHour = moment().format("H");
 
-    var todaysDate = $("#currentDay");
-
-    todaysDate.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-    var workHour = $("workHour");
-    var saveBtns = $("saveBtn");
-    var data = {};
-
-    var update = function () {
-        todaysDate.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-
-        
-    var now = moment().hour(); 
-
-    workHour.each(function (i, element) {
-        element = $(element);
-        console.log(workHour);
-        if (now > getElementById.attr("data-hour")) {
-            element.addClass("past").removeClass("future present");
-            } 
-        else if (now == element.attr("data-hour")) {
-            element.addClass("present").removeClass("future past");
-            }
-        });
-    }
-   
-    setInterval(update, 1000);
-
-    saveBtns.on("click", function (event) {
+setInterval(() => {
+    let now =moment();
+    let date = now.format("dddd, MMMM, hh:mm a");
+    currently.text(date);
+}, 100);
 
 
-        var button = $(this);
 
-        var btnData = $(this).attr("data-hour");
-        console.log(btnData);
-
-
-        var userText = $("#d" + btnData);
-        console.log(userText);
-
-
-       
-        localStorage.setItem(userText.attr("id"), userText.val());
+$(".saveBtn").click(function () { 
+    $('input[type="text"]').each(function () { 
+        const id = $(this).attr('id'); 
+        const value = $(this).val(); 
+        localStorage.setItem(id, value);
     });
-
-
-    $("#d1").text(localStorage.getItem("d1"));
-    $("#d2").text(localStorage.getItem("d2"));
-    $("#d3").text(localStorage.getItem("d3"));
-    $("#d4").text(localStorage.getItem("d4"));
-    $("#d5").text(localStorage.getItem("d5"));
-    $("#d6").text(localStorage.getItem("d6"));
-    $("#d7").text(localStorage.getItem("d7"));
-    $("#d8").text(localStorage.getItem("d8"));
-    $("#d9").text(localStorage.getItem("d9"));
-
-
-    $("#clear").on("click", function () {
-        console.log("clicked");
-        localStorage.clear();
-        window.location.reload();
-
-
-    });
-
 });
+
+$('input[type="text"]').each(function () { 
+    const getting = $(this).attr('id'); 
+    const letsGrab = localStorage.getItem(getting); 
+    document.getElementById(getting).value = letsGrab; 
+});
+
+colorChecks(9, "#workHour9"); 
+colorChecks(10, "#workHour10"); 
+colorChecks(11, "#workHour11"); 
+colorChecks(12, "#workHour12"); 
+colorChecks(13, "#workHour13");
+colorChecks(14, "#workHour14"); 
+colorChecks(15, "#workHour15"); 
+colorChecks(16, "#workHour16"); 
+colorChecks(17, "#workHour17"); 
+
+function colorChecks(time, theId) { 
+    if (nowHour > time) { 
+        $(theId).addClass("past"); 
+    }
+    if (nowHour < time) { 
+        $(theId).addClass("future"); 
+    }
+    if (nowHour == time) { 
+        $(theId).addClass("present");
+    }
+}
