@@ -3,18 +3,20 @@ $(document).ready(function () {
     var todaysDate = $("#currentDay");
 
     todaysDate.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
-    var workHour = $("#time-block");
-    var saveBtns = $("#saveBtn");
+    var workHour = $("workHour");
+    var saveBtns = $("saveBtn");
     var data = {};
 
     var update = function () {
         todaysDate.text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+        
     var now = moment().hour(); 
 
     workHour.each(function (i, element) {
         element = $(element);
-        if (now > element.attr("data-hour")) {
+        console.log(workHour);
+        if (now > getElementById.attr("data-hour")) {
             element.addClass("past").removeClass("future present");
             } 
         else if (now == element.attr("data-hour")) {
@@ -22,7 +24,7 @@ $(document).ready(function () {
             }
         });
     }
-
+   
     setInterval(update, 1000);
 
     saveBtns.on("click", function (event) {

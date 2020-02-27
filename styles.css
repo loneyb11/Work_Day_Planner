@@ -13,7 +13,6 @@ body {
   position: absolute;
 }
 
-
 textarea{
   background: transparent;
   border: none;
@@ -28,38 +27,23 @@ textarea{
 .jumbotron {
   text-align: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: azure;
   font-family: 'Saira Semi Condensed', sans-serif;
   color: black;
   border-radius: 0;
   border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
-.time-block{
-  text-align: center;
-  border-radius: 1px;
-  border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
-  padding: 5px;
-}
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
+  height: 100px;
+  border-top: 0.1rem solid rgb(86, 165, 235, 0.25);
   border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border-left: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
+  
 }
-
-.hour {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-  border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
-}
-
 .past {
   background-color: #e6e4e4aa;
   color: white;
@@ -75,10 +59,18 @@ textarea{
   color: white;
 }
 
+.hour {
+  white-space: pre-wrap;
+  height: 50px;
+  border-top: 1px solid rgb(85, 78, 78);;
+  border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
+}
+
 .saveBtn {
+  height: 50px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  background-color: #06AED5aa;
+  background-color: rgba(5, 29, 253, 0.667);
   color: white;
 }
 
