@@ -1,150 +1,83 @@
+body {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5;
+  width: 100%;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  text-align: center;
+  line-height: .5;
+  border: 0.5rem solid rgb(86, 165, 235, 0.25);
+  padding: 0 1.5em 0 1.5em;
+  justify-content: center;
+  position: absolute;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-    rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
-    />
+textarea{
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  padding: 5px;
+  position: absolute;
+}
 
-    <link
-    href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" 
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Work Day Scheduler</title>
-  </head>
+.jumbotron {
+  text-align: center;
+  justify-content: center;
+  background-color: azure;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  color: black;
+  border-radius: 0;
+  border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
+}
 
-<body>
-<header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">Scheudle your work day using this simple calendar app</p>
-      <p id="currentDay" class="lead"></p>
-      <button class="btn btn-dark" id="clear">Clear Local Storage</button>
-    </header>
+.row {
+  white-space: pre-wrap;
+  height: 100px;
+  border-top: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border-left: 0.1rem solid rgb(86, 165, 235, 0.25);
+  border-bottom: 0.1rem solid rgb(86, 165, 235, 0.25);
+}
 
-    <div id="calendarArea" class="container-fluid">
-      <!-- Timeblocks go here -->
-      <div class="Time-block">
-    
-<form>
-  
-<!-- Hour 9 -->
-  <div class="container row m-3"><br />
-    <br />09:00
-   <div class="col-lg-10 col-md-10 col-sm-8">
-    <textarea class="form-control" id="workHour9" data-hour="9" rows="2" placeholder="Enter hourly events here..."></textarea>
-    </div>
-    <div class="col-lg-1 col-md-1 col-sm-2">
-    <button id="nineButton" type="button" class="saveBtn p-3">save</button>
-    </div>
-  </div>
-  
-  <!-- Hour 10 -->
-    <div class="container row m-3">
-      <br />
-      <br />10:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour10" data-hour="10" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="tenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  <!-- Hour 11 -->
-  
-    <div class="container row m-3"><br />
-      <br />11:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour11" data-hour="11" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="elevenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  <!-- Hour 12 -->
-    <div class="container row m-3"><br />
-      <br />12:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour12" data-hour="12" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="twelveButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  <!-- Hour 13 -->
-    <div class="container row m-3"><br />
-      <br />13:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour13" data-hour="13" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="thirteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  
-  <!-- Hour 14 -->
-    <div class="container row m-3"><br />
-      <br />14:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour14" data-hour="14" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="fourteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  
-  <!-- Hour 15 -->
-    <div class="container row m-3"><br />
-      <br />15:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour15" data-hour="15" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="fithteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  
-  <!-- Hour 16 -->
-    <div class="container row m m-3"><br />
-      <br />16:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour16" data-hour="16" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="sixteenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  
-  <!-- Hour 17 -->
-    <div class="container row m m-3"><br />
-      <br />17:00
-     <div class="col-lg-10 col-md-10 col-sm-8">
-      <textarea class="form-control" id="workHour17" data-hour="17" rows="2" placeholder="Enter hourly events here..."></textarea>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-2">
-      <button id="seventeenButton" type="button" class="saveBtn p-3">save</button>
-      </div>
-    </div>
-    
-  </form>
-</div>
-</div>
+.description{
+white-space: pre-wrap;
+}
 
+.past {
+  background-color: #e6e4e4aa;
+  color: white;
+}
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
+.present {
+  background-color: #ff6961aa;
+  color: white;
+}
+
+.future {
+  background-color: #81f381aa;
+  color: white;
+}
+
+.hour {
+  white-space: pre-wrap;
+  height: 50px;
+  border-top: 1px solid rgb(85, 78, 78);;
+  border-right: 0.1rem solid rgb(86, 165, 235, 0.25);
+}
+
+.saveBtn {
+  height: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(5, 29, 253, 0.667);
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 1.4rem;
+  transition: all .3s ease-in-out;
+}
+
