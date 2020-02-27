@@ -13,7 +13,6 @@ $("#clear").on("click", function () {
     window.location.reload();
 });
 
-
 $(".saveBtn").click(function () { 
     $('input[type="text"]').each(function () { 
         const id = $(this).attr('id'); 
@@ -22,11 +21,6 @@ $(".saveBtn").click(function () {
     });
 });
 
-$('input[type="text"]').each(function () { 
-    const getting = $(this).attr('id'); 
-    const letsGrab = localStorage.getItem(getting); 
-    document.getElementById(getting).value = letsGrab; 
-});
 
 colorChange(9, "#workHour9"); 
 colorChange(10, "#workHour10"); 
