@@ -7,12 +7,13 @@ setInterval(() => {
     currently.text(date);
 }, 1000);
 
+// clear funciton to reset form fields
 $("#clear").on("click", function () {
     console.log("clicked");
     localStorage.clear();
     window.location.reload();
 });
-
+// save to local storage
 $(".saveBtn").click(function () { 
     $('input[type="text"]').each(function () { 
         const id = $(this).attr('id'); 
@@ -21,7 +22,7 @@ $(".saveBtn").click(function () {
     });
 });
 
-
+// change the color of the form fields, color past(grey), present(red) and future(green).
 colorChange(9, "#workHour9"); 
 colorChange(10, "#workHour10"); 
 colorChange(11, "#workHour11"); 
@@ -32,6 +33,7 @@ colorChange(15, "#workHour15");
 colorChange(16, "#workHour16"); 
 colorChange(17, "#workHour17"); 
 
+// Functuion to change color
 function colorChange(time, theId) { 
     if (nowHour > time) { 
         $(theId).addClass("past"); 
