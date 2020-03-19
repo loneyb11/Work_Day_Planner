@@ -2,7 +2,7 @@
 
 Link GitHub Pages - https://loneyb11.github.io/Homework-05-Calendar-app/
 
-Homework instructions:
+
 
 05 Third-Party APIs: Work Day Scheduler
 
