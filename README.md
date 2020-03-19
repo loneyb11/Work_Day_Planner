@@ -2,7 +2,7 @@
 
 Link GitHub Pages - https://loneyb11.github.io/Homework-05-Calendar-app/
 
-![](images/work_day_calendar.png)
+![](images/work_day_planner.png)
 
 05 Third-Party APIs: Work Day Scheduler
 
